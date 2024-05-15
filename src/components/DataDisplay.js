@@ -34,7 +34,7 @@ const DataDisplay = () => {
   const [formData, setFormData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/data') // Update with your backend endpoint
+    fetch(process.env.REACT_APP_API_URL_DEV + '/data') // Update with your backend endpoint
       .then((response) => response.json())
       .then((data) => {
         setFormData(data);

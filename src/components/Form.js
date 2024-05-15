@@ -163,7 +163,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      fetch('http://localhost:3001/submit', {
+    fetch(process.env.REACT_APP_API_URL_DEV + '/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
